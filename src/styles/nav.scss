@@ -1,0 +1,22 @@
+@use "color";
+
+.nav-bar {
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: color.$nav-bg;
+    color: color.$primary-font;
+
+    li {
+        padding: 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: color.$nav-hover;
+        }
+    }
+}

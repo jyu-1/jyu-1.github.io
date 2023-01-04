@@ -1,0 +1,14 @@
+@use "color";
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: color.$primary-font;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
