@@ -1,40 +1,36 @@
 import "../styles/nav.scss";
 
 interface VoidFunction {
-    scrollHandler: (refArg: string) => void;
+    scrollHandler: (refIndex: number) => void;
 }
 
 const NavBar = ({ scrollHandler }: VoidFunction) => {
     return (
         <ul className="nav-bar">
             <li
-                className="home-link"
                 onClick={() => {
-                    scrollHandler("homeRef");
+                    scrollHandler(0);
                 }}
             >
                 Home
             </li>
             <li
-                className="about-link"
                 onClick={() => {
-                    scrollHandler("aboutRef");
+                    scrollHandler(1);
                 }}
             >
                 About
             </li>
             <li
-                className="project-link"
                 onClick={() => {
-                    scrollHandler("projectRef");
+                    scrollHandler(2);
                 }}
             >
                 Projects
             </li>
             <li
-                className="contact-link"
                 onClick={() => {
-                    scrollHandler("contactRef");
+                    scrollHandler(3);
                 }}
             >
                 Contact

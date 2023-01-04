@@ -7,116 +7,66 @@ import Project from "./components/Project";
 import { throttle } from "lodash";
 
 const App = () => {
-    const homeRef = useRef<HTMLDivElement>(null);
-    const aboutRef = useRef<HTMLDivElement>(null);
-    const projectRef = useRef<HTMLDivElement>(null);
-    const contactRef = useRef<HTMLDivElement>(null);
+    const navRef = useRef<HTMLDivElement[]>([]);
 
-    const scrollHandler = (refArg: string) => {
-        switch (refArg) {
-            case "homeRef":
-                if (homeRef.current !== null)
-                    homeRef.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                break;
-            case "aboutRef":
-                if (aboutRef.current !== null)
-                    aboutRef.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                break;
-            case "projectRef":
-                if (projectRef.current !== null)
-                    projectRef.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                break;
-            case "contactRef":
-                if (contactRef.current !== null)
-                    contactRef.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                break;
-        }
+    const scrollHandler = (refIndex: number) => {
+        if (navRef.current[refIndex])
+            navRef.current[refIndex].scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
     };
 
     useEffect(() => {
         const checkPagePosition = () => {
-            const navLinks = document.querySelectorAll(".nav-bar li");
-            const viewPortTop = window.pageYOffset + window.innerHeight * 0.25;
-            const coords = [
-                {
-                    top: homeRef.current?.offsetTop ?? 0,
-                    bottom:
-                        (homeRef.current?.offsetTop ?? 0) +
-                        (homeRef.current?.offsetHeight ?? 0),
-                },
-                {
-                    top: aboutRef.current?.offsetTop ?? 0,
-                    bottom:
-                        (aboutRef.current?.offsetTop ?? 0) +
-                        (aboutRef.current?.offsetHeight ?? 0),
-                },
-                {
-                    top: projectRef.current?.offsetTop ?? 0,
-                    bottom:
-                        (projectRef.current?.offsetTop ?? 0) +
-                        (projectRef.current?.offsetHeight ?? 0),
-                },
-                {
-                    top: contactRef.current?.offsetTop ?? 0,
-                    bottom:
-                        (contactRef.current?.offsetTop ?? 0) +
-                        (contactRef.current?.offsetHeight ?? 0),
-                },
-            ];
+            const vPTop = window.pageYOffset + window.innerHeight * 0.25;
 
-            navLinks.forEach((item) => {
+            navRef.current.forEach((item, index) => {
+                const selectLink = document.querySelector(
+                    `.nav-bar li:nth-child(${index + 1})`
+                );
                 if (
-                    viewPortTop >= coords[0].top &&
-                    viewPortTop < coords[0].bottom &&
-                    item.classList.contains("home-link")
-                )
-                    item.classList.add("active");
-                else if (
-                    viewPortTop >= coords[1].top &&
-                    viewPortTop < coords[1].bottom &&
-                    item.classList.contains("about-link")
-                )
-                    item.classList.add("active");
-                else if (
-                    viewPortTop >= coords[2].top &&
-                    viewPortTop < coords[2].bottom &&
-                    item.classList.contains("project-link")
-                )
-                    item.classList.add("active");
-                else if (
-                    viewPortTop >= coords[3].top &&
-                    item.classList.contains("contact-link")
-                )
-                    item.classList.add("active");
-                else item.classList.remove("active");
+                    vPTop >= item.offsetTop &&
+                    vPTop < item.offsetTop + item.offsetHeight
+                ) {
+                    selectLink?.classList.add("active");
+                } else selectLink?.removeAttribute("class");
             });
         };
 
-        const throttleScroll = throttle(checkPagePosition, 250);
+        const throttleScroll = throttle(checkPagePosition, 200);
 
         window.addEventListener("scroll", throttleScroll);
-        return () => window.removeEventListener("scroll", throttleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", throttleScroll);
+        };
     }, []);
 
     return (
         <div className="app">
-            <Home ref={homeRef} scrollHandler={scrollHandler} />
+            <Home
+                ref={(element) =>
+                    (navRef.current[0] = element as HTMLDivElement)
+                }
+                scrollHandler={scrollHandler}
+            />
             <NavBar scrollHandler={scrollHandler} />
-            <About ref={aboutRef} />
-            <Project ref={projectRef} />
-            <Contact ref={contactRef} />
+            <About
+                ref={(element) =>
+                    (navRef.current[1] = element as HTMLDivElement)
+                }
+            />
+            <Project
+                ref={(element) =>
+                    (navRef.current[2] = element as HTMLDivElement)
+                }
+            />
+            <Contact
+                ref={(element) =>
+                    (navRef.current[3] = element as HTMLDivElement)
+                }
+            />
         </div>
     );
 };

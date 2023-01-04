@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import "../styles/home.scss";
 
 interface VoidFunction {
-    scrollHandler: (refArg: string) => void;
+    scrollHandler: (refIndex: number) => void;
 }
 
 const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
@@ -13,7 +13,7 @@ const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
             <p>I'm a Full Stack Developer</p>
             <button
                 onClick={() => {
-                    props.scrollHandler("aboutRef");
+                    props.scrollHandler(1);
                 }}
             >
                 Get to know me
