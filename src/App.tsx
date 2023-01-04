@@ -46,7 +46,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <Home ref={homeRef} />
+            <Home ref={homeRef} scrollHandler={scrollHandler} />
             <NavBar scrollHandler={scrollHandler} />
             <About ref={aboutRef} />
             <Project ref={projectRef} />

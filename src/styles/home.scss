@@ -1,10 +1,8 @@
 @use "color";
+@use "modules";
 
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include modules.flex($direction: column, $justify: center, $align: center);
 
     p {
         color: color.$primary-font;
