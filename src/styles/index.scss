@@ -2,11 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    scroll-behavior: smooth;
 }
 
 #root {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.app {
+    div {
+        min-height: 100vh;
+        scroll-behavior: smooth;
+    }
 }

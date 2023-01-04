@@ -1,4 +1,4 @@
-# Nathan's Portfolio Website
+# Portfolio Website
 
 This project was created using create-react-app.\
 TypeScript and SASS is used for this project.
