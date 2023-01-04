@@ -3,6 +3,7 @@
 
 .home {
     @include modules.flex($direction: column, $justify: center, $align: center);
+    background-color: color.$primary-background;
 
     p {
         color: color.$primary-font;

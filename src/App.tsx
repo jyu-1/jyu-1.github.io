@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
@@ -43,6 +43,69 @@ const App = () => {
                 break;
         }
     };
+
+    useEffect(() => {
+        const checkPagePosition = () => {
+            const navLinks = document.querySelectorAll(".nav-bar li");
+            const viewPortTop = window.pageYOffset + window.innerHeight * 0.25;
+            const coords = [
+                {
+                    top: homeRef.current?.offsetTop ?? 0,
+                    bottom:
+                        (homeRef.current?.offsetTop ?? 0) +
+                        (homeRef.current?.offsetHeight ?? 0),
+                },
+                {
+                    top: aboutRef.current?.offsetTop ?? 0,
+                    bottom:
+                        (aboutRef.current?.offsetTop ?? 0) +
+                        (aboutRef.current?.offsetHeight ?? 0),
+                },
+                {
+                    top: projectRef.current?.offsetTop ?? 0,
+                    bottom:
+                        (projectRef.current?.offsetTop ?? 0) +
+                        (projectRef.current?.offsetHeight ?? 0),
+                },
+                {
+                    top: contactRef.current?.offsetTop ?? 0,
+                    bottom:
+                        (contactRef.current?.offsetTop ?? 0) +
+                        (contactRef.current?.offsetHeight ?? 0),
+                },
+            ];
+
+            navLinks.forEach((item) => {
+                if (
+                    viewPortTop >= coords[0].top &&
+                    viewPortTop < coords[0].bottom &&
+                    item.classList.contains("home-link")
+                )
+                    item.classList.add("active");
+                else if (
+                    viewPortTop >= coords[1].top &&
+                    viewPortTop < coords[1].bottom &&
+                    item.classList.contains("about-link")
+                )
+                    item.classList.add("active");
+                else if (
+                    viewPortTop >= coords[2].top &&
+                    viewPortTop < coords[2].bottom &&
+                    item.classList.contains("project-link")
+                )
+                    item.classList.add("active");
+                else if (
+                    viewPortTop >= coords[3].top &&
+                    item.classList.contains("contact-link")
+                )
+                    item.classList.add("active");
+                else item.classList.remove("active");
+            });
+        };
+
+        window.addEventListener("scroll", checkPagePosition);
+        return () => window.removeEventListener("scroll", checkPagePosition);
+    }, []);
 
     return (
         <div className="app">

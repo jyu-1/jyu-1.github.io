@@ -3,6 +3,7 @@
 
 .project {
     @include modules.flex($justify: center, $align: center);
+    background-color: color.$primary-background;
     color: color.$primary-font;
     font-size: 3rem;
 }

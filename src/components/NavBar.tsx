@@ -8,6 +8,7 @@ const NavBar = ({ scrollHandler }: VoidFunction) => {
     return (
         <ul className="nav-bar">
             <li
+                className="home-link"
                 onClick={() => {
                     scrollHandler("homeRef");
                 }}
@@ -15,6 +16,7 @@ const NavBar = ({ scrollHandler }: VoidFunction) => {
                 Home
             </li>
             <li
+                className="about-link"
                 onClick={() => {
                     scrollHandler("aboutRef");
                 }}
@@ -22,6 +24,7 @@ const NavBar = ({ scrollHandler }: VoidFunction) => {
                 About
             </li>
             <li
+                className="project-link"
                 onClick={() => {
                     scrollHandler("projectRef");
                 }}
@@ -29,6 +32,7 @@ const NavBar = ({ scrollHandler }: VoidFunction) => {
                 Projects
             </li>
             <li
+                className="contact-link"
                 onClick={() => {
                     scrollHandler("contactRef");
                 }}
