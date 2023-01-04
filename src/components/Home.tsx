@@ -8,7 +8,6 @@ interface VoidFunction {
 const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
     return (
         <div ref={ref} className="home">
-            <p>Page Still Under Construction</p>
             <p>Hey there, I'm Jia</p>
             <p>You can also call me Nathan</p>
             <p>I'm a Full Stack Developer</p>

@@ -4,6 +4,7 @@ import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Project from "./components/Project";
+import { throttle } from "lodash";
 
 const App = () => {
     const homeRef = useRef<HTMLDivElement>(null);
@@ -103,8 +104,10 @@ const App = () => {
             });
         };
 
-        window.addEventListener("scroll", checkPagePosition);
-        return () => window.removeEventListener("scroll", checkPagePosition);
+        const throttleScroll = throttle(checkPagePosition, 250);
+
+        window.addEventListener("scroll", throttleScroll);
+        return () => window.removeEventListener("scroll", throttleScroll);
     }, []);
 
     return (
