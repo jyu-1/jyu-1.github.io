@@ -2,8 +2,7 @@
 @use "modules";
 
 .about {
-    @include modules.flex($justify: center, $align: center);
+    @include modules.flex($direction: column, $justify: center, $align: center);
     background-color: color.$secondary-background;
     color: color.$primary-font;
-    font-size: 3rem;
 }
