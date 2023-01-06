@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import "../styles/about.scss";
 import sData from "./skills";
+import Cloud from "./Cloud";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -33,6 +34,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
                     </div>
                 );
             })}
+            <Cloud />
         </div>
     );
 });

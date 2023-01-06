@@ -18,12 +18,12 @@ interface Skills {
 }
 
 const sData: Skills[] = [
-    { name: "Javascript", svg: JavascriptSVG },
+    { name: "JavaScript", svg: JavascriptSVG },
     { name: "TypeScript", svg: TypeScriptSVG },
     { name: "React", svg: ReactSVG },
-    { name: "Node.Js", svg: NodeSVG },
+    { name: "Node.js", svg: NodeSVG },
     { name: "MongoDB", svg: MongoDBSVG },
-    { name: "Express.Js", svg: ExpressSVG },
+    { name: "Express.js", svg: ExpressSVG },
     { name: "HTML", svg: HTMLSVG },
     { name: "CSS", svg: CSSSVG },
     { name: "SASS", svg: SASSSVG },
