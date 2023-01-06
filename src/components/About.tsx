@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import "../styles/about.scss";
+import sData from "./skills";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -24,22 +25,14 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
                 Outside of coding, I enjoy playing tennis, trying new foods, and
                 traveling.
             </div>
-            <div>Javascript</div>
-            <div>TypeScript</div>
-            <div>React</div>
-            <div>Node.js</div>
-            <div>MongoDB</div>
-            <div>Express.js</div>
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>SASS</div>
-            <div>Git</div>
-            <div>NPM</div>
-            <div>Jest</div>
-            <div>Webpack</div>
-            <div></div>
-            <div></div>
-            <div></div>
+            {sData.map((item, index) => {
+                return (
+                    <div key={index} className="skill-list">
+                        <img src={item.svg} alt={item.name} />
+                        <div>{item.name}</div>
+                    </div>
+                );
+            })}
         </div>
     );
 });

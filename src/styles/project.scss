@@ -2,8 +2,12 @@
 @use "modules";
 
 .project {
-    @include modules.flex($justify: center, $align: center);
+    @include modules.flex($direction: column);
     background-color: color.$primary-background;
     color: color.$primary-font;
-    font-size: 3rem;
+    font-size: 2rem;
+
+    img {
+        pointer-events: none;
+    }
 }

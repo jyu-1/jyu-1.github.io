@@ -16,7 +16,7 @@ const Project = forwardRef<HTMLDivElement>((props, ref) => {
                         <div>{item.description}</div>
                         <div>{item.preview}</div>
                         <div>{item.source}</div>
-                        <div>{item.gif}</div>
+                        <img src={item.gif} alt={item.name} />
                     </div>
                 );
             })}
