@@ -14,9 +14,39 @@
     li {
         padding: 20px;
         cursor: pointer;
+        position: relative;
+        display: flex;
+
+        span {
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s;
+
+            .nav-out {
+                display: inline-flex;
+            }
+
+            .nav-in {
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
 
         &:hover {
             background-color: color.$nav-hover;
+            span {
+                .nav-out {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+
+                .nav-in {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
         }
 
         &.active {

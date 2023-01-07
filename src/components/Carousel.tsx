@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import sData from "./skills";
 import "../styles/carousel.scss";
 
@@ -35,7 +35,7 @@ const Carousel = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             if (!paused) activeScroll(active + 1);
-        }, 1000);
+        }, 2000);
 
         return () => {
             clearInterval(interval);
