@@ -12,7 +12,7 @@ const Project = forwardRef<HTMLDivElement>((props, ref) => {
                         className={index % 2 === 0 ? "left-gif" : "right-gif"}
                     >
                         <div>
-                            <div>{item.name}</div>
+                            <div className="project-title">{item.name}</div>
                             <div>{item.description}</div>
                             <div>
                                 <a href={item.preview}>Live Preview</a>
