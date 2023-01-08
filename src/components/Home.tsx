@@ -1,64 +1,40 @@
-import { forwardRef, useEffect, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 import "../styles/home.scss";
+import Typewriter from "typewriter-effect";
 
 interface VoidFunction {
     scrollHandler: (refIndex: number) => void;
 }
 
 const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
-    const [heroText, setHeroText] = useState<string[]>(["", "", "", ""]);
     const [showButton, setShowButton] = useState(false);
-
-    useEffect(() => {
-        const headerText = [
-            "Hi, I'm Jia",
-            "You can also call me Nathan",
-            "I'm a Full Stack Developer",
-        ];
-
-        function timeout(ms: number) {
-            return new Promise((resolve) => setTimeout(resolve, ms));
-        }
-
-        const typeWriter = async () => {
-            for (let i = 0; i < headerText.length; i++) {
-                for (let j = 0; j < headerText[i].length; j++) {
-                    setHeroText((prev) =>
-                        prev.map((item, index) =>
-                            index === i ? item + headerText[i].charAt(j) : item
-                        )
-                    );
-                    await timeout(100);
-                }
-                await timeout(1000);
-            }
-
-            setShowButton(true);
-        };
-
-        window.addEventListener("load", typeWriter);
-
-        return () => {
-            window.removeEventListener("load", typeWriter);
-        };
-    }, []);
+    const meButton = useRef<HTMLButtonElement>(null);
 
     return (
         <div ref={ref} className="home">
-            <div>
-                {heroText.map((item, index) => {
-                    return item !== "" ? (
-                        <p key={index}>
-                            {item}
-                            {heroText[index + 1] === "" ? (
-                                <span className="input-cursor"></span>
-                            ) : null}
-                        </p>
-                    ) : null;
-                })}
-            </div>
+            <Typewriter
+                onInit={(typewriter) => {
+                    typewriter
+                        .pauseFor(1000)
+                        .typeString("Hi, I'm Jia<br>")
+                        .pauseFor(1000)
+                        .typeString("You can also call me Nathan<br>")
+                        .pauseFor(1000)
+                        .typeString("I'm a Full Stack Developer")
+                        .pauseFor(1000)
+                        .callFunction(() => {
+                            setShowButton(true);
+                            if (meButton.current) {
+                                meButton.current.style.opacity = "1";
+                                meButton.current.style.left = "0";
+                            }
+                        })
+                        .start();
+                }}
+            />
             {showButton ? (
                 <button
+                    ref={meButton}
                     onClick={() => {
                         props.scrollHandler(1);
                     }}

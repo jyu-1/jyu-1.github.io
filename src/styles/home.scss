@@ -3,37 +3,26 @@
 
 .home {
     @include modules.flex($direction: column, $justify: center, $align: center);
+    gap: 25px;
     background-color: color.$primary-background;
 
-    p {
+    .Typewriter {
+        text-align: center;
+    }
+
+    .Typewriter__wrapper {
         color: color.$primary-font;
         font-size: 3rem;
         font-weight: bold;
-        text-align: center;
-        @include modules.flex($justify: center, $align: center);
     }
 
-    .input-cursor {
-        display: inline-block;
-        width: 3px;
-        height: 3rem;
-        background-color: color.$primary-font;
-        margin-left: 5px;
-        animation: blink 0.6s linear infinite alternate;
+    .Typewriter__cursor {
+        color: color.$primary-font;
+        font-size: 3rem;
+        font-weight: bold;
     }
 
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-        40% {
-            opacity: 1;
-        }
-        60% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-        }
+    & > button {
+        @include modules.button();
     }
 }
