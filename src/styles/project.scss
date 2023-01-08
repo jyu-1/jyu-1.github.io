@@ -7,7 +7,7 @@
     color: color.$primary-font;
     font-size: 2rem;
     padding: 100px;
-    gap: 50px;
+    gap: 100px;
 
     img {
         pointer-events: none;
@@ -15,21 +15,31 @@
 
     .left-gif {
         display: flex;
-        align-items: flex-start;
 
         & > * {
             flex-basis: 50%;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
     .right-gif {
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-start;
 
         & > * {
             flex-basis: 50%;
             text-align: end;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
