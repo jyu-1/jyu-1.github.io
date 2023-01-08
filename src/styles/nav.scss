@@ -10,6 +10,7 @@
     gap: 10px;
     background-color: color.$nav-bg;
     color: color.$primary-font;
+    z-index: 10;
 
     li {
         padding: 20px;

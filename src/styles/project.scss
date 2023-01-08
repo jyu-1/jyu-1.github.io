@@ -6,8 +6,39 @@
     background-color: color.$primary-background;
     color: color.$primary-font;
     font-size: 2rem;
+    padding: 100px;
+    gap: 50px;
 
     img {
         pointer-events: none;
+    }
+
+    .left-gif {
+        display: flex;
+        align-items: flex-start;
+
+        & > * {
+            flex-basis: 50%;
+        }
+    }
+
+    .right-gif {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+
+        & > * {
+            flex-basis: 50%;
+            text-align: end;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        margin: 20px;
     }
 }
