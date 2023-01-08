@@ -3,7 +3,7 @@
 
 .home {
     @include modules.flex($direction: column, $justify: center, $align: center);
-    gap: 25px;
+    gap: 20px;
     background-color: color.$primary-background;
 
     .Typewriter {
@@ -23,6 +23,21 @@
     }
 
     & > button {
-        @include modules.button();
+        padding: 10px 20px;
+        border: 2px solid red;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(255, 100, 100);
+        color: white;
+        font-weight: bold;
+        transition: transform 0.5s, opacity 1s, left 0.5s;
+        opacity: 0;
+        position: relative;
+        left: -100%;
+
+        &:hover {
+            background-color: rgb(255, 50, 50);
+            transform: scale(1.25);
+        }
     }
 }

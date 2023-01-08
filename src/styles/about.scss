@@ -5,9 +5,14 @@
     @include modules.flex($justify: center, $align: center);
     background-color: color.$secondary-background;
     color: color.$primary-font;
+    padding: 100px;
 
     & > div {
         flex-basis: 50%;
+    }
+
+    p {
+        font-size: 1.5rem;
     }
 
     .about-skills {

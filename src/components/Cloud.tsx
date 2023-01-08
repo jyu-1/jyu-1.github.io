@@ -38,7 +38,7 @@ const Cloud = () => {
 
     return (
         <div className="cloud-container">
-            <canvas id="tagcanvas" width="500" height="500"></canvas>
+            <canvas id="tagcanvas" width="600" height="600"></canvas>
             <div id="taglist">
                 {skills.map((skill) => (
                     <a href="/#" key={skill.title}>
