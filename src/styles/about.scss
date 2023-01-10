@@ -2,24 +2,30 @@
 @use "modules";
 
 .about {
-    @include modules.flex($justify: center, $align: center);
+    display: flex;
     background-color: color.$secondary-background;
     color: color.$primary-font;
     padding: 100px;
 
-    & > div {
-        flex-basis: 50%;
-    }
+    .about-content {
+        @include modules.flex($justify: center, $align: center);
+        margin: auto;
+        max-width: 1920px;
 
-    p {
-        font-size: 1.5rem;
-    }
+        & > div {
+            flex-basis: 50%;
+        }
 
-    .about-skills {
-        @include modules.flex(
-            $direction: column,
-            $justify: center,
-            $align: center
-        );
+        p {
+            font-size: 1.5rem;
+        }
+
+        .about-skills {
+            @include modules.flex(
+                $direction: column,
+                $justify: center,
+                $align: center
+            );
+        }
     }
 }

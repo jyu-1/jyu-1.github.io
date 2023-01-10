@@ -2,60 +2,69 @@
 @use "modules";
 
 .project {
-    @include modules.flex($direction: column);
+    display: flex;
     background-color: color.$primary-background;
     color: color.$primary-font;
     font-size: 2rem;
     padding: 100px;
-    gap: 100px;
 
-    img {
-        pointer-events: none;
-        min-width: 300px;
-        height: auto;
-        align-self: flex-start;
-    }
+    .project-content {
+        @include modules.flex($direction: column);
+        margin: auto;
+        max-width: 1920px;
+        width: 100%;
 
-    .left-gif {
-        display: flex;
-
-        & > * {
-            flex-basis: 50%;
+        img {
+            pointer-events: none;
+            min-width: 200px;
+            height: auto;
+            align-self: flex-start;
         }
 
-        & > div {
+        .left-gif {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
 
-    .right-gif {
-        display: flex;
-        flex-direction: row-reverse;
+            & > * {
+                flex-basis: 50%;
+            }
 
-        & > * {
-            flex-basis: 50%;
-            text-align: end;
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
         }
 
-        & > div {
+        .right-gif {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            flex-direction: row-reverse;
+
+            & > * {
+                flex-basis: 50%;
+                text-align: end;
+            }
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
         }
-    }
 
-    a {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
-        color: white;
-        border: 1px solid white;
-        margin: 20px;
-    }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+        }
 
-    .project-title {
-        font-weight: bold;
+        .project-title {
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 100px 0;
+        }
     }
 }
