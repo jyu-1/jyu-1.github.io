@@ -8,7 +8,6 @@
     list-style: none;
     justify-content: flex-end;
     gap: 10px;
-    background-color: color.$nav-bg;
     color: color.$primary-font;
     z-index: 10;
 
@@ -54,5 +53,9 @@
             background-color: color.$nav-bg-active;
             color: color.$nav-font-active;
         }
+    }
+
+    &:hover {
+        background-color: color.$nav-bg;
     }
 }

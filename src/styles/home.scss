@@ -4,7 +4,6 @@
 .home {
     @include modules.flex($direction: column, $justify: center, $align: center);
     gap: 20px;
-    background-color: color.$primary-background;
 
     .Typewriter {
         text-align: center;
