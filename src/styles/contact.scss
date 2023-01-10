@@ -2,7 +2,105 @@
 @use "modules";
 
 .contact {
-    @include modules.flex($direction: column, $justify: center, $align: center);
+    @include modules.flex($direction: column);
     color: color.$primary-font;
-    font-size: 2rem;
+    padding: 100px 100px 25px 100px;
+
+    & > div {
+        flex: 1;
+        @include modules.flex($justify: center, $align: center);
+        margin: auto;
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+        padding-bottom: 5px;
+        font-size: 3rem;
+        border-bottom: 1px solid color.$primary-header-border;
+    }
+
+    .email-content {
+        & > div {
+            display: flex;
+            gap: 25px;
+
+            & > * {
+                flex-basis: 50%;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: color.$secondary-font;
+        }
+
+        .contact-logo {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 25px;
+
+            input,
+            .contact-message {
+                max-width: 700px;
+                min-width: 300px;
+                width: 100%;
+                border: none;
+                background-color: #343449;
+                padding: 20px;
+                color: color.$primary-font;
+            }
+
+            .contact-message {
+                font-family: inherit;
+                height: 200px;
+                resize: vertical;
+            }
+
+            button {
+                padding: 20px 40px;
+                color: color.$primary-header-border;
+                border: 2px solid color.$primary-header-border;
+                font-weight: bold;
+                background: none;
+                text-align: center;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: red;
+                    color: white;
+                }
+            }
+        }
+
+        a {
+            img {
+                width: 75px;
+                height: 75px;
+                transition: transform 0.5s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        a {
+            color: color.$primary-font;
+            text-decoration: none;
+        }
+    }
 }
