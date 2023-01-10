@@ -23,11 +23,11 @@
 
     & > button {
         padding: 10px 20px;
-        border: 2px solid red;
+        border: 2px solid color.$primary-header-border;
         border-radius: 5px;
         cursor: pointer;
-        background-color: rgb(255, 100, 100);
-        color: white;
+        background: none;
+        color: color.$primary-font;
         font-weight: bold;
         transition: transform 0.5s, opacity 1s, left 0.5s;
         opacity: 0;
@@ -35,7 +35,8 @@
         left: -200px;
 
         &:hover {
-            background-color: rgb(255, 50, 50);
+            background-color: red;
+            color: white;
             transform: scale(1.25);
         }
     }

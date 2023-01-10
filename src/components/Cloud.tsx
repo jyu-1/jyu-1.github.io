@@ -23,7 +23,7 @@ const Cloud = () => {
             minSpeed: 0.05,
             noSelect: true,
             shuffleTags: true,
-            textColour: "white",
+            textColour: "#E1E1E1",
             zoomMax: 1.5,
             zoomMin: 0.5,
             zoomStep: 0.1,

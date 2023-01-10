@@ -17,11 +17,11 @@ const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
                     typewriter
                         .pauseFor(1000)
                         .typeString(
-                            `Hi, I'm <span style="color: #FF0000"></div>Jia</span><br>`
+                            `Hi, I'm <span style="color: #FF9696"></div>Jia</span><br>`
                         )
                         .pauseFor(1000)
                         .typeString(
-                            'You can also call me <span style="color: #FF0000">Nathan</span><br>'
+                            'You can also call me <span style="color: #FF9696">Nathan</span><br>'
                         )
                         .pauseFor(1000)
                         .typeString("I'm a Full Stack Developer")

@@ -8,6 +8,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
         <div ref={ref} className="about">
             <div className="about-content">
                 <div>
+                    <h1>About Me</h1>
                     <p>
                         Hi, I'm Jia, an Electrical Engineering graduate from the
                         University of California, Riverside. When I first
