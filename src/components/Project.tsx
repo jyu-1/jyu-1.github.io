@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import "../styles/project.scss";
 import pData from "./data";
-import gitImg from "../assets/icons/github.svg";
 
 const Project = forwardRef<HTMLDivElement>((props, ref) => {
     return (

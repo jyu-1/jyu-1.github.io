@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import "../styles/home.scss";
 import Typewriter from "typewriter-effect";
 
@@ -9,6 +9,14 @@ interface VoidFunction {
 const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
     const [showButton, setShowButton] = useState(false);
     const meButton = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        if (meButton.current && showButton) {
+            meButton.current.style.visibility = "visible";
+            meButton.current.style.opacity = "1";
+            meButton.current.style.left = "0";
+        }
+    }, [showButton]);
 
     return (
         <div ref={ref} className="home">
@@ -28,24 +36,18 @@ const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
                         .pauseFor(1000)
                         .callFunction(() => {
                             setShowButton(true);
-                            if (meButton.current) {
-                                meButton.current.style.opacity = "1";
-                                meButton.current.style.left = "0";
-                            }
                         })
                         .start();
                 }}
             />
-            {showButton ? (
-                <button
-                    ref={meButton}
-                    onClick={() => {
-                        props.scrollHandler(1);
-                    }}
-                >
-                    Get to know me
-                </button>
-            ) : null}
+            <button
+                ref={meButton}
+                onClick={() => {
+                    props.scrollHandler(1);
+                }}
+            >
+                Get to know me
+            </button>
         </div>
     );
 });
