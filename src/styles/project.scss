@@ -11,6 +11,9 @@
 
     img {
         pointer-events: none;
+        min-width: 300px;
+        height: auto;
+        align-self: flex-start;
     }
 
     .left-gif {
