@@ -52,7 +52,7 @@
         }
 
         &.active {
-            background-color: color.$nav-bg-active;
+            background-color: color.$primary-header-border;
             color: color.$nav-font-active;
         }
     }
