@@ -18,3 +18,41 @@
         @content;
     }
 }
+
+@mixin bounce-animation {
+    display: inline-block;
+
+    &:hover {
+        animation: bounce 0.5s;
+        -webkit-animation: bounce 0.5s;
+        -moz-animation: bounce 0.5s;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-20px);
+    }
+}
+@-moz-keyframes bounce {
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    50% {
+        -moz-transform: translateY(-20px);
+    }
+}
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

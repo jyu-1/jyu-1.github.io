@@ -21,6 +21,10 @@
         font-weight: bold;
     }
 
+    .name-animation {
+        @include modules.bounce-animation;
+    }
+
     @include modules.mobile {
         .Typewriter__wrapper {
             font-size: 1.5rem;

@@ -23,13 +23,14 @@ const Home = forwardRef<HTMLDivElement, VoidFunction>((props, ref) => {
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
+                        .changeDelay(50)
                         .pauseFor(1000)
                         .typeString(
-                            `Hi, I'm <span style="color: #FF9696"></div>Jia</span><br>`
+                            `Hi, I'm <span class="name-animation" style="color: #FF9696"></div>Jia</span><br>`
                         )
                         .pauseFor(1000)
                         .typeString(
-                            'You can also call me <span style="color: #FF9696">Nathan</span><br>'
+                            'You can also call me <span class="name-animation" style="color: #FF9696">Nathan</span><br>'
                         )
                         .pauseFor(1000)
                         .typeString("I'm a Full Stack Developer")
