@@ -51,7 +51,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                             <input
                                 type="hidden"
                                 name="_next"
-                                value="https://nateyu.com"
+                                value="https://nateyu.com/contact"
                             />
                             <input
                                 type="text"
