@@ -70,6 +70,10 @@
             align-items: flex-end;
             gap: 25px;
 
+            @include modules.tablet {
+                align-items: center;
+            }
+
             input,
             .contact-message {
                 max-width: 700px;

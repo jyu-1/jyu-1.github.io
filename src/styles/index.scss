@@ -1,4 +1,5 @@
 @use "color";
+@use "modules";
 
 * {
     margin: 0;
@@ -22,6 +23,10 @@ body {
         black,
         color.$primary-background
     );
+
+    @include modules.mobile {
+        overflow-x: hidden;
+    }
 }
 
 ::-webkit-scrollbar {

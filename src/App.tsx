@@ -23,7 +23,7 @@ const App = () => {
 
             navRef.current.forEach((item, index) => {
                 const selectLink = document.querySelector(
-                    `.nav-bar li:nth-child(${index + 1})`
+                    `.nav-bar li:nth-child(${index + 2})`
                 );
                 if (
                     vPTop >= item.offsetTop &&

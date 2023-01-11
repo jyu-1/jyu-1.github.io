@@ -1,4 +1,24 @@
 @use "color";
+@use "modules";
+
+.menu-icon {
+    display: none;
+    min-height: 0 !important;
+    position: sticky;
+    top: 0;
+    text-align: end;
+    padding: 10px;
+}
+
+@include modules.mobile {
+    .menu-icon {
+        display: block;
+    }
+
+    .hide-icon {
+        visibility: hidden;
+    }
+}
 
 .nav-bar {
     padding: 0 10px;
@@ -12,6 +32,12 @@
     color: color.$primary-font;
     font-weight: bold;
     z-index: 10;
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+
+    .close-button {
+        display: none;
+    }
 
     li {
         padding: 20px;
@@ -59,5 +85,32 @@
 
     &:hover {
         background-color: color.$nav-bg;
+    }
+
+    @include modules.mobile {
+        position: fixed;
+        inset: 0 0 0 50%;
+        flex-direction: column;
+        justify-content: normal;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-out;
+
+        &[data-visible="true"] {
+            transform: translateX(0%);
+        }
+
+        .close-button {
+            text-align: end;
+            margin-top: 10px;
+            display: block;
+        }
+
+        li {
+            justify-content: center;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     }
 }
