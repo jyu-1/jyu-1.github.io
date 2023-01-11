@@ -35,6 +35,8 @@
     }
 
     .email-content {
+        width: 100%;
+
         & > div {
             display: flex;
             gap: 25px;

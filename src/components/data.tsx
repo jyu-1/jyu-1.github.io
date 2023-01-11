@@ -16,7 +16,7 @@ const pData: Project[] = [
     {
         name: "Discuss App",
         description:
-            "A clone of the popular communication app, Discord. Features user authentication, channel selection, channel creation, and more. Build with React, React Router, and Firebase.",
+            "A clone of the popular communication app, Discord. Features include user authentication, channel selection, channel creation, and more. Build with React, React Router, and Firebase.",
         preview: "https://jyu-1.github.io/discuss/",
         source: "https://github.com/jyu-1/discuss",
         gif: discussgif,
@@ -32,7 +32,7 @@ const pData: Project[] = [
     {
         name: "Weather App",
         description:
-            "Weather app to check forecast of the next five days. Features searching any city in the world and unit selection. Forecast data is provided by OpenWeatherAPI. Bundled using Webpack.",
+            "Weather app to check the forecast for the next five days. Features include searching for any city in the world and unit selection. Forecast data is provided by OpenWeatherAPI. Bundled using Webpack.",
         preview: "https://jyu-1.github.io/weather/",
         source: "https://github.com/jyu-1/weather",
         gif: weathergif,
@@ -40,7 +40,7 @@ const pData: Project[] = [
     {
         name: "Resume Maker",
         description:
-            "An easy solution to making personal resume (CV). Build resume using the left side of the app and real-time feedback will be provided on the right. Build using React.",
+            "An easy solution to making a personal resume (CV). Build a resume using the left side of the app, and real-time feedback will be provided on the right. Build using React.",
         preview: "https://jyu-1.github.io/cv-project/",
         source: "https://github.com/jyu-1/cv-project",
         gif: resumejpg,
@@ -48,7 +48,7 @@ const pData: Project[] = [
     {
         name: "Memory Card",
         description:
-            "Select a card without picking the same one. Every successful selection gives 1 point. Picking an already picked card resets point back to zero. Built using React.",
+            "Select a card without picking the same one. Every successful selection earns 1 point. Picking an already picked card resets the point back to zero. Built using React.",
         preview: "https://jyu-1.github.io/memory-card/",
         source: "https://github.com/jyu-1/memory-card",
         gif: memorygif,

@@ -14,13 +14,13 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                         <div>
                             <p>
                                 I'm interested in new opportunities. However, if
-                                you have any feedbacks or just want to chat,
+                                you have any feedback or just want to chat,
                                 leave a message and I will get back to you.
                             </p>
                             <br />
                             <p>
-                                You can reach me by the contact form or you can
-                                also email me directly at: jia@nateyu.com
+                                You can reach me using the contact form, or you
+                                can also email me directly at: jia@nateyu.com
                             </p>
                             <br />
                             <div className="contact-logo">
