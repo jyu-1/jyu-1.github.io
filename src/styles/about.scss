@@ -6,12 +6,24 @@
     color: color.$primary-font;
     padding: 100px;
 
+    @include modules.tablet {
+        padding: 50px;
+    }
+
+    @include modules.mobile {
+        padding: 5px 5px 50px 5px;
+    }
+
     .about-content {
         @include modules.flex($justify: center, $align: center);
         margin: auto;
         max-width: 1920px;
         gap: 25px;
         width: 100%;
+
+        @include modules.tablet {
+            flex-direction: column;
+        }
 
         h1 {
             margin-bottom: 50px;
@@ -25,12 +37,30 @@
             color: color.$secondary-font;
         }
 
+        @include modules.mobile {
+            h1 {
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
         .about-skills {
             @include modules.flex(
                 $direction: column,
                 $justify: center,
                 $align: center
             );
+
+            @include modules.mobile {
+                #tagcanvas {
+                    width: 90vw;
+                    height: 90vw;
+                }
+            }
         }
     }
 }

@@ -21,6 +21,16 @@
         font-weight: bold;
     }
 
+    @include modules.mobile {
+        .Typewriter__wrapper {
+            font-size: 1.5rem;
+        }
+
+        .Typewriter__cursor {
+            font-size: 1.5rem;
+        }
+    }
+
     & > button {
         padding: 10px 20px;
         border: 2px solid color.$primary-header-border;
