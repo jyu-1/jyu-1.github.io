@@ -7,6 +7,7 @@ const skills = [
     { title: "Node.js" },
     { title: "MongoDB" },
     { title: "Express.js" },
+    { title: "Next.js" },
     { title: "HTML" },
     { title: "CSS" },
     { title: "SASS" },

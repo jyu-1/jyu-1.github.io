@@ -1,3 +1,4 @@
+import feedbookgif from "../assets/projects/feedbook.gif";
 import discussgif from "../assets/projects/discuss.gif";
 import shoppinggif from "../assets/projects/shop.gif";
 import weathergif from "../assets/projects/weather.gif";
@@ -14,12 +15,12 @@ interface Project {
 
 const pData: Project[] = [
     {
-        name: "Discuss App",
+        name: "Feedbook",
         description:
-            "A clone of the popular communication app, Discord. Features include user authentication, channel selection, channel creation, and more. Build with React, React Router, and Firebase.",
-        preview: "https://jyu-1.github.io/discuss/",
-        source: "https://github.com/jyu-1/discuss",
-        gif: discussgif,
+            "Facebook clone. Features user authentication, creating post, deleting post, updating post, commenting on post, and liking post. Built with Next.js, Express.js, Node.js, and MongoDB with Mongoose.",
+        preview: "https://jyu-1.github.io/feedbook/",
+        source: "https://github.com/jyu-1/feedbook",
+        gif: feedbookgif,
     },
     {
         name: "Shopping Cart",
@@ -28,6 +29,14 @@ const pData: Project[] = [
         preview: "https://jyu-1.github.io/shopping-cart/",
         source: "https://github.com/jyu-1/shopping-cart",
         gif: shoppinggif,
+    },
+    {
+        name: "Discuss App",
+        description:
+            "A clone of the popular communication app, Discord. Features include user authentication, channel selection, channel creation, and more. Build with React, React Router, and Firebase.",
+        preview: "https://jyu-1.github.io/discuss/",
+        source: "https://github.com/jyu-1/discuss",
+        gif: discussgif,
     },
     {
         name: "Weather App",

@@ -4,6 +4,7 @@ import ReactSVG from "../assets/icons/react.svg";
 import NodeSVG from "../assets/icons/nodejs.svg";
 import MongoDBSVG from "../assets/icons/mongodb.svg";
 import ExpressSVG from "../assets/icons/express.svg";
+import NextSVG from "../assets/icons/nextjs.svg";
 import SASSSVG from "../assets/icons/sass.svg";
 import HTMLSVG from "../assets/icons/html5.svg";
 import CSSSVG from "../assets/icons/css3.svg";
@@ -24,6 +25,7 @@ const sData: Skills[] = [
     { name: "Node.js", svg: NodeSVG },
     { name: "MongoDB", svg: MongoDBSVG },
     { name: "Express.js", svg: ExpressSVG },
+    { name: "Next.js", svg: NextSVG },
     { name: "SASS", svg: SASSSVG },
     { name: "HTML", svg: HTMLSVG },
     { name: "CSS", svg: CSSSVG },
