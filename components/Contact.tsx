@@ -1,10 +1,11 @@
 import { forwardRef } from "react";
+import styles from "@/styles/contact.module.scss";
 
 const Contact = forwardRef<HTMLDivElement>(function ContactRef(props, ref) {
     return (
-        <div ref={ref} className="contact">
+        <div ref={ref} className={styles.contact}>
             <div>
-                <div className="email-content">
+                <div className={styles.email_content}>
                     <h1>Contact Me</h1>
                     <div>
                         <div>
@@ -20,7 +21,7 @@ const Contact = forwardRef<HTMLDivElement>(function ContactRef(props, ref) {
                                 can also email me directly at: jia@nateyu.com
                             </p>
                             <br />
-                            <div className="contact-logo">
+                            <div className={styles.contact_logo}>
                                 <a
                                     href="https://github.com/jyu-1"
                                     title="Github Profile"
@@ -72,7 +73,7 @@ const Contact = forwardRef<HTMLDivElement>(function ContactRef(props, ref) {
                                 required
                             />
                             <textarea
-                                className="contact-message"
+                                className={styles.contact_message}
                                 name="message"
                                 placeholder="Message"
                                 required

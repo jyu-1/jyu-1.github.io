@@ -3,7 +3,7 @@
 .carousel {
     overflow: hidden;
 
-    .carousel-container {
+    .carousel_container {
         white-space: nowrap;
         transition: transform 1s;
         width: 600px;
@@ -13,7 +13,7 @@
         }
     }
 
-    .carousel-item {
+    .carousel_item {
         display: inline-flex;
         flex-direction: column;
         align-items: center;

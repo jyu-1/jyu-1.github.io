@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import styles from "@/styles/nav.module.scss";
 
 interface VoidFunction {
     scrollHandler: (refIndex: number) => void;
@@ -23,7 +24,9 @@ export default function NavBar({ scrollHandler }: VoidFunction) {
     return (
         <>
             <div
-                className={`menu-icon ${openMenu ? "hide-icon" : ""}`}
+                className={`${styles.menu_icon} ${
+                    openMenu ? styles.hide_icon : ""
+                }`}
                 onClick={menuHandler}
             >
                 <img
@@ -33,8 +36,8 @@ export default function NavBar({ scrollHandler }: VoidFunction) {
                     height="75px"
                 />
             </div>
-            <ul className="nav-bar" data-visible="false" ref={navRef}>
-                <div className="close-button" onClick={menuHandler}>
+            <ul className={styles.nav_bar} data-visible="false" ref={navRef}>
+                <div className={styles.close_button} onClick={menuHandler}>
                     <img
                         src="/assets/icons/close.png"
                         alt=""
@@ -52,7 +55,7 @@ export default function NavBar({ scrollHandler }: VoidFunction) {
                                 return (
                                     <span key={letterIndex}>
                                         <span
-                                            className="nav-out"
+                                            className={styles.nav_out}
                                             style={{
                                                 transitionDelay: `${delay}s`,
                                             }}
@@ -60,7 +63,7 @@ export default function NavBar({ scrollHandler }: VoidFunction) {
                                             {letter}
                                         </span>
                                         <span
-                                            className="nav-in"
+                                            className={styles.nav_in}
                                             style={{
                                                 transitionDelay: `${delay}s`,
                                             }}

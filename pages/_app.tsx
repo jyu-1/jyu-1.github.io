@@ -1,10 +1,5 @@
 import "@/styles/global.scss";
-import "@/styles/nav.scss";
 import "@/styles/home.scss";
-import "@/styles/about.scss";
-import "@/styles/carousel.scss";
-import "@/styles/project.scss";
-import "@/styles/contact.scss";
 
 import Head from "next/head";
 import type { AppProps } from "next/app";

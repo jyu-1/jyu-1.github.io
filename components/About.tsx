@@ -1,11 +1,12 @@
 import { forwardRef } from "react";
 import Cloud from "./Cloud";
 import Carousel from "./Carousel";
+import styles from "@/styles/about.module.scss";
 
 const About = forwardRef<HTMLDivElement>(function AboutRef(props, ref) {
     return (
-        <div ref={ref} className="about">
-            <div className="about-content">
+        <div ref={ref} className={styles.about}>
+            <div className={styles.about_content}>
                 <div>
                     <h1>About Me</h1>
                     <p>
@@ -35,7 +36,7 @@ const About = forwardRef<HTMLDivElement>(function AboutRef(props, ref) {
                         foods, and traveling.
                     </p>
                 </div>
-                <div className="about-skills">
+                <div className={styles.about_skills}>
                     <Cloud />
                     <Carousel />
                 </div>

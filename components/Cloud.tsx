@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import sData from "./skills";
+import styles from "@/styles/about.module.scss";
 
 export default function Cloud() {
     useEffect(() => {
@@ -23,7 +24,12 @@ export default function Cloud() {
 
     return (
         <div className="cloud-container">
-            <canvas id="tagcanvas" width="600" height="600"></canvas>
+            <canvas
+                id="tagcanvas"
+                className={styles.tagcanvas}
+                width="600"
+                height="600"
+            ></canvas>
             <div id="taglist">
                 {sData.map((skill) => (
                     // eslint-disable-next-line @next/next/no-html-link-for-pages

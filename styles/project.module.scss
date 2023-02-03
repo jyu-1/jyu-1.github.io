@@ -14,7 +14,7 @@
         padding: 5px;
     }
 
-    .project-content {
+    .project_content {
         @include modules.flex($direction: column);
         margin: auto;
         max-width: 1920px;
@@ -27,13 +27,13 @@
             padding-bottom: 5px;
         }
 
-        .project-title {
+        .project_title {
             font-size: 2rem;
             border-bottom: 1px solid color.$secondary-header-border;
             padding-bottom: 5px;
         }
 
-        .project-description {
+        .project_description {
             font-size: 1.5rem;
             color: color.$secondary-font;
         }
@@ -43,11 +43,11 @@
                 margin-bottom: 25px;
             }
 
-            .project-title {
+            .project_title {
                 margin-bottom: 10px;
             }
 
-            .project-description {
+            .project_description {
                 margin-bottom: 10px;
             }
         }
@@ -57,11 +57,11 @@
                 font-size: 1.5rem;
             }
 
-            .project-title {
+            .project_title {
                 font-size: 1.25rem;
             }
 
-            .project-description {
+            .project_description {
                 font-size: 1rem;
             }
         }
@@ -75,7 +75,7 @@
             box-shadow: -30px 30px 0 color.$secondary-header-border;
         }
 
-        .left-gif {
+        .left_gif {
             display: flex;
             gap: 10px;
 
@@ -102,7 +102,7 @@
             }
         }
 
-        .right-gif {
+        .right_gif {
             display: flex;
             flex-direction: row-reverse;
             gap: 10px;
@@ -163,7 +163,7 @@
             }
         }
 
-        .project-title {
+        .project_title {
             font-weight: bold;
         }
 

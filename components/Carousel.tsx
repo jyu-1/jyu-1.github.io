@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import sData from "./skills";
+import styles from "@/styles/carousel.module.scss";
 
 interface Skills {
     skill: {
@@ -10,7 +11,7 @@ interface Skills {
 
 const CarouselItem = ({ skill }: Skills) => {
     return (
-        <div className="carousel-item" style={{ width: "20%" }}>
+        <div className={styles.carousel_item} style={{ width: "20%" }}>
             <img src={skill.svg} alt={skill.name} />
             <div>{skill.name}</div>
         </div>
@@ -43,12 +44,12 @@ export default function Carousel() {
 
     return (
         <div
-            className="carousel"
+            className={styles.carousel}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
             <div
-                className="carousel-container"
+                className={styles.carousel_container}
                 style={{ transform: `translateX(-${active * 20}%)` }}
             >
                 {sData.map((item, index) => {
