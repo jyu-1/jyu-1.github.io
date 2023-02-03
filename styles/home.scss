@@ -1,0 +1,58 @@
+@use "color";
+@use "modules";
+
+.home {
+    @include modules.flex($direction: column, $justify: center, $align: center);
+    gap: 20px;
+
+    .Typewriter {
+        text-align: center;
+    }
+
+    .Typewriter__wrapper {
+        color: color.$primary-font;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .Typewriter__cursor {
+        color: color.$primary-font;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .name-animation {
+        @include modules.bounce-animation;
+    }
+
+    @include modules.mobile {
+        .Typewriter__wrapper {
+            font-size: 1.5rem;
+        }
+
+        .Typewriter__cursor {
+            font-size: 1.5rem;
+        }
+    }
+
+    & > button {
+        padding: 10px 20px;
+        border: 2px solid color.$primary-header-border;
+        border-radius: 5px;
+        cursor: pointer;
+        background: none;
+        color: color.$primary-header-border;
+        font-weight: bold;
+        transition: transform 0.5s ease-in-out, opacity 1s, left 0.5s;
+        opacity: 0;
+        position: relative;
+        left: -200px;
+        visibility: hidden;
+
+        &:hover {
+            background-color: red;
+            color: white;
+            transform: scale(1.25);
+        }
+    }
+}

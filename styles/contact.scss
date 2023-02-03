@@ -1,0 +1,149 @@
+@use "color";
+@use "modules";
+
+.contact {
+    @include modules.flex($direction: column);
+    color: color.$primary-font;
+    padding: 100px 100px 25px 100px;
+
+    @include modules.tablet {
+        padding: 50px 50px 10px 50px;
+    }
+
+    @include modules.mobile {
+        padding: 5px 5px 10px 5px;
+    }
+
+    & > div {
+        flex: 1;
+        @include modules.flex($justify: center, $align: center);
+        margin: auto;
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+        padding-bottom: 5px;
+        font-size: 3rem;
+        border-bottom: 1px solid color.$primary-header-border;
+
+        @include modules.mobile {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    .email-content {
+        width: 100%;
+
+        & > div {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 100px;
+
+            @include modules.tablet {
+                flex-direction: column;
+            }
+
+            & > * {
+                flex-basis: 50%;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: color.$secondary-font;
+
+            @include modules.mobile {
+                font-size: 1rem;
+            }
+        }
+
+        .contact-logo {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 25px;
+
+            @include modules.tablet {
+                align-items: center;
+            }
+
+            input,
+            .contact-message {
+                max-width: 700px;
+                min-width: 300px;
+                width: 100%;
+                border: none;
+                background-color: #343449;
+                padding: 20px;
+                color: color.$primary-font;
+            }
+
+            .contact-message {
+                font-family: inherit;
+                height: 200px;
+                resize: vertical;
+            }
+
+            button {
+                padding: 20px 40px;
+                color: color.$primary-header-border;
+                border: 2px solid color.$primary-header-border;
+                font-weight: bold;
+                background: none;
+                text-align: center;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: transform 0.5s ease-in-out;
+
+                &:hover {
+                    background-color: red;
+                    color: white;
+                    transform: scale(1.25);
+                }
+            }
+
+            @include modules.mobile {
+                gap: 10px;
+
+                button {
+                    padding: 10px 20px;
+                }
+            }
+        }
+
+        a {
+            img {
+                width: 75px;
+                height: 75px;
+                transition: transform 0.5s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.25);
+                }
+
+                @include modules.mobile {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        a {
+            color: color.$primary-font;
+            text-decoration: none;
+        }
+    }
+}
