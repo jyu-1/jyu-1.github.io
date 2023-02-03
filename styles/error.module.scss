@@ -1,0 +1,33 @@
+@use "color";
+
+.error {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: color.$primary-font;
+    font-size: 2rem;
+    text-align: center;
+    gap: 50px;
+
+    .bold {
+        font-weight: 1000;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 2px solid color.$primary-font;
+    }
+
+    a {
+        padding: 20px 40px;
+        text-decoration: none;
+        color: color.$primary-font;
+        border: 2px solid color.$primary-font;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: color.$primary-font;
+            color: black;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is Version 2 of the website rebuilt using Next.js.\
+This is Version 2 of the website rebuilt using Next.js.
 
 ## Live Website
 
