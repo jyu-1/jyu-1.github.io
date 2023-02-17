@@ -3,6 +3,11 @@
 This project was created using create-react-app.\
 TypeScript and SASS is used for this project.
 
+## Link to V2
+
+Version 1 of this website is deprecated. Below is the link to Version 2.\
+https://github.com/jyu-1/jyu-1.github.io/tree/v2
+
 ## Live Preview
 
 https://nateyu.com
