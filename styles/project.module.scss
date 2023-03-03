@@ -5,6 +5,7 @@
     display: flex;
     color: color.$primary-font;
     padding: 100px;
+    overflow-x: hidden;
 
     @include modules.tablet {
         padding: 50px;
