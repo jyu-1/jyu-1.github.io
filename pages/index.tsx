@@ -51,6 +51,7 @@ export default function Index() {
 
         return () => {
             window.removeEventListener("scroll", throttleScroll);
+            observer.disconnect();
         };
     }, []);
 
