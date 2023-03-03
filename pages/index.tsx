@@ -39,6 +39,16 @@ export default function Index() {
 
         window.addEventListener("scroll", throttleScroll);
 
+        const observer = new IntersectionObserver((items) => {
+            items.forEach((item) => {
+                if (item.isIntersecting) item.target.classList.add("show_item");
+                else item.target.classList.remove("show_item");
+            });
+        });
+
+        const observerElements = document.querySelectorAll(".hidden_item");
+        observerElements.forEach((item) => observer.observe(item));
+
         return () => {
             window.removeEventListener("scroll", throttleScroll);
         };

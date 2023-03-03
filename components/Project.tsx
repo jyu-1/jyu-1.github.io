@@ -17,7 +17,13 @@ const Project = forwardRef<HTMLDivElement>(function projectRef(props, ref) {
                                         : styles.right_gif
                                 }
                             >
-                                <div>
+                                <div
+                                    className={
+                                        index % 2 === 0
+                                            ? "hidden_item left"
+                                            : "hidden_item right"
+                                    }
+                                >
                                     <div className={styles.project_title}>
                                         {item.name}
                                     </div>
@@ -29,7 +35,15 @@ const Project = forwardRef<HTMLDivElement>(function projectRef(props, ref) {
                                         <a href={item.source}>Source Code</a>
                                     </div>
                                 </div>
-                                <img src={item.gif} alt={item.name} />
+                                <img
+                                    src={item.gif}
+                                    alt={item.name}
+                                    className={
+                                        index % 2 === 0
+                                            ? "hidden_item right"
+                                            : "hidden_item left"
+                                    }
+                                />
                             </div>
                             <hr />
                         </div>

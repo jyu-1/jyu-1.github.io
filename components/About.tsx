@@ -7,7 +7,7 @@ const About = forwardRef<HTMLDivElement>(function AboutRef(props, ref) {
     return (
         <div ref={ref} className={styles.about}>
             <div className={styles.about_content}>
-                <div>
+                <div className="hidden_item left">
                     <h1>About Me</h1>
                     <p>
                         Hi, I&#39;m Jia, an Electrical Engineering graduate from
@@ -36,7 +36,7 @@ const About = forwardRef<HTMLDivElement>(function AboutRef(props, ref) {
                         foods, and traveling.
                     </p>
                 </div>
-                <div className={styles.about_skills}>
+                <div className={`${styles.about_skills} hidden_item right`}>
                     <Cloud />
                     <Carousel />
                 </div>
