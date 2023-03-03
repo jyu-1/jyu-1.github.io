@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Home from "@/components/Home";
 import Project from "@/components/Project";
 import { throttle } from "lodash";
+import navStyle from "@/styles/nav.module.scss";
 
 export default function Index() {
     const navRef = useRef<HTMLDivElement[]>([]);
@@ -23,13 +24,13 @@ export default function Index() {
 
             navRef.current.forEach((item, index) => {
                 const selectLink = document.querySelector(
-                    `.nav-bar > li:nth-child(${index + 2})`
+                    `#nav_bar > li:nth-child(${index + 2})`
                 );
                 if (
                     vPTop >= item.offsetTop &&
                     vPTop < item.offsetTop + item.offsetHeight
                 ) {
-                    selectLink?.classList.add("active");
+                    selectLink?.classList.add(navStyle.active);
                 } else selectLink?.removeAttribute("class");
             });
         };

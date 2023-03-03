@@ -36,7 +36,12 @@ export default function NavBar({ scrollHandler }: VoidFunction) {
                     height="75px"
                 />
             </div>
-            <ul className={styles.nav_bar} data-visible="false" ref={navRef}>
+            <ul
+                className={styles.nav_bar}
+                id="nav_bar"
+                data-visible="false"
+                ref={navRef}
+            >
                 <div className={styles.close_button} onClick={menuHandler}>
                     <img
                         src="/assets/icons/close.png"
