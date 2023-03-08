@@ -18,7 +18,7 @@ const Contact = forwardRef<HTMLDivElement>(function ContactRef(props, ref) {
                             <br />
                             <p>
                                 You can reach me using the contact form, or you
-                                can also email me directly at: jia@nateyu.com
+                                can also email me directly at: nathan@nateyu.com
                             </p>
                             <br />
                             <div className={styles.contact_logo}>

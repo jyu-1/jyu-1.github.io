@@ -10,14 +10,14 @@ const About = forwardRef<HTMLDivElement>(function AboutRef(props, ref) {
                 <div className="hidden_item left">
                     <h1>About Me</h1>
                     <p>
-                        Hi, I&#39;m Jia, an Electrical Engineering graduate from
-                        the University of California, Riverside. When I first
-                        learned about web development, I was fascinated by its
-                        similarities to my studies and the endless possibilities
-                        it offers. With my background in research and
-                        collaboration with others, I bring a strong foundation
-                        in problem-solving and critical thinking to my work in
-                        software development.
+                        Hi, I&#39;m Nathan, an Electrical Engineering graduate
+                        from the University of California, Riverside. When I
+                        first learned about web development, I was fascinated by
+                        its similarities to my studies and the endless
+                        possibilities it offers. With my background in research
+                        and collaboration with others, I bring a strong
+                        foundation in problem-solving and critical thinking to
+                        my work in software development.
                     </p>
                     <br />
                     <br />
